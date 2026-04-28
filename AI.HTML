@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore – Professional Electronics Shop</title>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+body{background:#eef1f3;}
+
+
+.navbar{
+    background:#232f3e;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    margin-right:25px;
+}
+.search-box{
+    flex:1;
+    display:flex;
+}
+.search-box input{
+    width:100%;
+    padding:10px;
+    border:none;
+    font-size:16px;
+}
+.search-box button{
+    background:#febd69;
+    border:none;
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+}
+.nav-links{
+    margin-left:20px;
+    display:flex;
+    gap:20px;
+    font-size:15px;
+}
+.nav-links div{
+    cursor:pointer;
+}
+
+.categories{
+    background:#37475a;
+    padding:10px 20px;
+    color:white;
+    display:flex;
+    gap:25px;
+    overflow-x:auto;
+}
+.categories div:hover{color:#febd69;cursor:pointer;}
+
+
+.hero{
+    height:320px;
+    background:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
+}
+
+
+.container{
+    width:95%;
+    margin:auto;
+    padding:25px 0;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    box-shadow:0 0 6px rgba(0,0,0,.1);
+    transition:.3s;
+}
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(0,0,0,.25);
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:6px;
+}
+.card h4{margin-top:10px;}
+.price{
+    color:#b12704;
+    font-size:20px;
+    margin-top:5px;
+}
+.btn{
+    margin-top:10px;
+    background:#febd69;
+    padding:8px;
+    text-align:center;
+    border-radius:5px;
+    cursor:pointer;
+}
+.btn:hover{background:#f3a847;}
+
+
+footer{
+    background:#232f3e;
+    color:white;
+    padding:20px;
+    text-align:center;
+    margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <div class="logo">TechStore</div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search electronics...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="nav-links">
+        <div><i class="fas fa-user"></i> Account</div>
+        <div><i class="fas fa-box"></i> Orders</div>
+        <div><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)</div>
+    </div>
+</div>
+
+
+<div class="categories">
+    <div>Phones</div>
+    <div>Laptops</div>
+    <div>Gaming</div>
+    <div>TV</div>
+    <div>Accessories</div>
+</div>
+
+
+<div class="hero"></div>
+
+<!-- PRODUCTS -->
+<div class="container">
+<div class="grid">
+
+<div class="card"><img src="https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2023/09/pbi-iphone-15-pro.png"><h4>iPhone 15 Pro</h4><div class="price">$1199</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://tse1.mm.bing.net/th/id/OIP.2HFtW-tmli-lclS2Nq4ruQHaHk"><h4>Samsung Galaxy S23</h4><div class="price">$899</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"><h4>Wireless Speaker</h4><div class="price">$59</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://tse3.mm.bing.net/th/id/OIP.44ciNE8XxJXm84XpFy4NggHaLd"><h4>Sony Headphones</h4><div class="price">$329</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8"><h4>MacBook Pro</h4><div class="price">$1999</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://th.bing.com/th/id/R.604a883aa846c727eb3468b7a1467479?rik=t5wQLF6vL9Lhxw&pid=ImgRaw&r=0"><h4>Gaming Keyboard</h4><div class="price">$129</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://tse2.mm.bing.net/th/id/OIP.2B45r116wDvO7OEU3z7gTwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"><h4>Gaming Mouse</h4><div class="price">$79</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1593642532400-2682810df593"><h4>4K Smart TV</h4><div class="price">$1299</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db"><h4>PlayStation 5</h4><div class="price">$499</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7"><h4>Bluetooth Earbuds</h4><div class="price">$149</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://i5.walmartimages.com/asr/e9fae157-2589-4492-a56b-3a25386a33f0.482ef1e1d7bff4255b14509d3490f8c6.jpeg"><h4>Smart Watch</h4><div class="price">$199</div><div class="btn">Add to Cart</div></div>
+
+<div class="card"><img src="https://tse1.mm.bing.net/th/id/OIP.IsDvYNiHf3cgPfuZiZS0ggHaFu?rs=1&pid=ImgDetMain&o=7&rm=3"><h4>WiFi Router</h4><div class="price">$179</div><div class="btn">Add to Cart</div></div>
+
+</div>
+</div>
+
+<footer>© 2025 TechStore – Professional Electronics Shop</footer>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69f0793e5bff621c33f832a8/1jn9lj7lo';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
